@@ -27,10 +27,11 @@ export default [
             'vue/no-unused-components': 'warn',  // 警告未使用的组件
 
             // TypeScript 规则
-            '@typescript-eslint/no-unused-vars': 'warn',  // TypeScript 中的未使用变量警告
+            '@typescript-eslint/no-unused-vars': 'error',  // TypeScript 中的未使用变量警告
             '@typescript-eslint/no-explicit-any': 'warn',  // 禁用显式的 any 类型
             '@typescript-eslint/explicit-module-boundary-types': 'warn',  // 强制定义函数返回类型
-            '@typescript-eslint/no-inferrable-types': 'warn',  // 禁止显式定义类型推导结果
+            '@typescript-eslint/no-inferrable-types': 'warn',
+            'quotes': ['error', 'double']
         },
     },
 ];

@@ -7,7 +7,7 @@ export const COURSE_CONFIG = {
     start_day: 2,
     disDay: 246
 };
-export default (index = 'data') => {
+export default (index = "data") => {
     const time = new Date();
     const year = time.getFullYear();
     const month = time.getMonth() + 1;
@@ -15,9 +15,9 @@ export default (index = 'data') => {
     const hour = time.getHours();
     const minute = time.getMinutes();
     const second = time.getSeconds();
-    if (index === 'data') {
+    if (index === "data") {
         return `${year}年${month}月${day}日${hour}时${minute}分${second}秒`;
-    } else if (index === 'yearmonth') {
+    } else if (index === "yearmonth") {
         return `${year}年${month}月${day}日`;
     } else {
         return Date.parse(new Date().toString());
@@ -37,10 +37,10 @@ export function formatTime(timeData: string, type: string) {
         "11": "20.20-21.50"
     };
 
-    const t = timeData.split(' ');
+    const t = timeData.split(" ");
     const section = t[2];
     const s = section.split("-");
-    if (section.split('-').length <= 2) {
+    if (section.split("-").length <= 2) {
         const index = s[0].replace("[", "");
         return () => {
             return type === "easy" ? timeMap[index] : timeMap[index] + " " + section;
@@ -121,7 +121,7 @@ export function calcTimeInterval(year: number, date1: DateArgs, date2: DateArgs)
         return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
     }
 
-    if (isLeapYear(year)) monthMap['2'] = 29;
+    if (isLeapYear(year)) monthMap["2"] = 29;
     const date1DayTotal = calcTotal(date1);
     const date2DayTotal = calcTotal(date2);
 
@@ -212,7 +212,7 @@ export function getDateByWeekandWeekDay(data: DateArgs) {
     const day = weekDay === 0 ? 7 : weekDay - 1;
     date.setDate(date.getDate() + day);
     const month = date.getMonth() + 1;
-    const m = month.toString().padStart(2, '0');
+    const m = month.toString().padStart(2, "0");
     const d = date.getDate();
     const y = date.getFullYear();
     return `${y}-${m}-${d}`;

@@ -13,8 +13,8 @@
 </template>
 
 <script setup>
-import {calcTotal, COURSE_CONFIG, monthMap} from '@/utils/time'
-import {defineEmits, defineProps, onMounted, ref, watch,} from 'vue'
+import {calcTotal, COURSE_CONFIG, monthMap} from "@/utils/time"
+import {defineEmits, defineProps, onMounted, ref, watch,} from "vue"
 
 const props = defineProps({
   modelValue: {
@@ -37,7 +37,7 @@ function nextWeek() {
   if (currentWeek.value >= 25) {
     uni.showToast({
       title: "已是最大周数",
-      icon: 'error'
+      icon: "error"
     })
     return
   }
@@ -80,7 +80,7 @@ function prevWeek() {
   if (currentWeek.value <= 1) {
     uni.showToast({
       title: "已是最小周数",
-      icon: 'error'
+      icon: "error"
     })
     return
   }

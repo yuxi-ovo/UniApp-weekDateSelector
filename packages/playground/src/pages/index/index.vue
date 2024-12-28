@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import weekDaySelect from '../../../../components/src/components/weekDaySelect.vue'
+import weekDaySelect from "../../../../components/src/components/weekDaySelect.vue"
 </script>
 
 <style>
