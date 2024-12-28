@@ -1,0 +1,21 @@
+{
+    "extends": "@vue/tsconfig/tsconfig.json",
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "esnext",
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "lib": ["esnext", "dom"],
+        "types": ["@dcloudio/types","node"],
+        "moduleResolution": "node"
+    },
+    "include": [
+        "packages/playground/**/*.ts",
+        "packages/playground/**/*.d.ts",
+        "packages/playground/**/*.tsx",
+        "packages/playground/**/*.vue"
+    ]
+}
